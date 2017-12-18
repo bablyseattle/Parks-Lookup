@@ -1,4 +1,5 @@
 class ParksController < ApplicationController
+  include Response
 
    def index
     @parks = Park.all
@@ -26,10 +27,6 @@ class ParksController < ApplicationController
   end
 
   private
-
-   def json_response(object, status = :ok)
-    render json: object, status: status
-  end
 
   def park_params
     params.permit(:name, :state)
