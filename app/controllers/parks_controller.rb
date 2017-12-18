@@ -1,5 +1,5 @@
 class ParksController < ApplicationController
-  include Response
+  
 
    def index
     @parks = Park.all
@@ -16,7 +16,7 @@ class ParksController < ApplicationController
   end
 
   def create
-    @park = Park.create!(Park_params)
+    @park = Park.create!(park_params)
     json_response(@park, :created)
   end
 
