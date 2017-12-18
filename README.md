@@ -1,24 +1,56 @@
-# README
+# Parks Lookup
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##### By Bably Kumari
 
-Things you may want to cover:
+## Description
 
-* Ruby version
+This API lets users do CRUD and search for parks.
 
-* System dependencies
+## Setup
 
-* Configuration
+*  git clone https://github.com/bablyseattle/Parks-Lookup
 
-* Database creation
+*  $ bundle install
 
-* Database initialization
+*  $rake db:setup
 
-* How to run the test suite
+* $rails s
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+## Request Routes
+
+* GET /parks - all parks are displayed
+
+* GET /parks/:id - request a park by id
+
+* POST /parks - create parks with parameters name and state
+
+* PUT /parks/:id - update parks with one or both parameters name and state
+
+* DELETE /parks/:id - delete the park from the database
+
+* GET /parks?name[""] - search for a park in database based on name
+
+## Known Bugs
+
+* No Known Bugs
+
+## Technology Used
+
+* Rails
+
+* Postgres
+
+* Many gems like faker, factory bot for test etc.
+
+
+## Contact Info
+
+For questions and comments, please contact bablyhyd@gmail.com
+
+## License
+
+Copyright (c) 2017
+
+This software is licensed under the MIT licensed
