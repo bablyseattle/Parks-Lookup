@@ -1,9 +1,8 @@
 class ParksController < ApplicationController
-  before_action :find_park, only: [:show, :update, :destroy]
 
    def index
-    parks = Park.all
-    json_response(parks)
+    @parks = Park.all
+    json_response(@parks)
   end
 
   def show
@@ -27,6 +26,10 @@ class ParksController < ApplicationController
   end
 
   private
+
+   def json_response(object, status = :ok)
+    render json: object, status: status
+  end
 
   def park_params
     params.permit(:name, :state)
